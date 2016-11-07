@@ -1,0 +1,9 @@
+
+  Usage: index [options]
+
+  Options:
+
+    -h, --help            output usage information
+    -V, --version         output the version number
+    -t, --title [string]  Title of the book
+

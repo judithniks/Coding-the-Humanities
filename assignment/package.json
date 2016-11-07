@@ -1,0 +1,29 @@
+{
+  "name": "my-little-library",
+  "version": "1.0.0",
+  "description": "My little Library for the assignment of week 2. CTH2016",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "my",
+    "little",
+    "library",
+    "cth2016"
+  ],
+  "author": "Judith Niks",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.9.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/judithniks/Coding-the-Humanities.git"
+  },
+  "bugs": {
+    "url": "https://github.com/judithniks/Coding-the-Humanities/issues"
+  },
+  "homepage": "https://github.com/judithniks/Coding-the-Humanities#readme"
+}
