@@ -7,4 +7,6 @@
     -V, --version          output the version number
     -t, --title [string]   Title of the book
     -a, --author [string]  Author of the book
+    -p, --price [string]   Price of the book
+    -k, --kind [string]    Kind of book
 
