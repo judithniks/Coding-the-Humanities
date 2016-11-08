@@ -24,7 +24,6 @@ var program = require('commander');
  var book3_title = "We moeten allemaal feminist zijn"
  var book3_author = "Chimamanda Ngozi Adichie"
  var book3_price = "4,99"
- var book3_kind = "Paperback"
  var book3_pronounced_title = "Title: We moeten allemaal feminist zijn";
  var book3_pronounced_author = "Author: Chimamanda Ngozi Adichie";
  var book3_pronounced_price = "Price: 4,99";
@@ -33,7 +32,6 @@ var program = require('commander');
  var book4_title = "Juliana"
  var book4_author = "Jolande Withuis"
  var book4_price = "39,99"
- var book4_kind = "Gekartoneerd"
  var book4_pronounced_title = "Title: Juliana";
  var book4_pronounced_author = "Author: Jolande Withuis";
  var book4_pronounced_price = "Price: 39,99";
@@ -42,7 +40,6 @@ var program = require('commander');
  var book5_title = "How to win an argument"
  var book5_author = "Marcus Tullius Cicero"
  var book5_price = "17,50"
- var book5_kind = "Paperback"
  var book5_pronounced_title = "Title: How to win an argument";
  var book5_pronounced_author = "Author: Marcus Tullius Cicero";
  var book5_pronounced_price = "Price: 17,50";
@@ -209,50 +206,5 @@ switch(program.kind)
         console.log(book5_pronounced_kind);
         break;
 
-    case book3_kind:
-        console.log(book2_pronounced_title);
-        console.log(book2_pronounced_author);
-        console.log(book2_pronounced_price);
-        console.log(book2_pronounced_kind);
-
-        console.log(book3_pronounced_title);
-        console.log(book3_pronounced_author);
-        console.log(book3_pronounced_price);
-        console.log(book3_pronounced_kind);
-
-        console.log(book5_pronounced_title);
-        console.log(book5_pronounced_author);
-        console.log(book5_pronounced_price);
-        console.log (book5_pronounced_kind);
-        break;
-
-    case book4_kind:
-        console.log(book1_pronounced_title);
-        console.log(book1_pronounced_author);
-        console.log(book1_pronounced_price);
-        console.log(book1_pronounced_kind);
-
-        console.log(book4_pronounced_title);
-        console.log(book4_pronounced_author);
-        console.log(book4_pronounced_price);
-        console.log(book4_pronounced_kind);
-        break;
-
-    case book5_kind:
-        console.log(book2_pronounced_title);
-        console.log(book2_pronounced_author);
-        console.log(book2_pronounced_price);
-        console.log(book2_pronounced_kind);
-
-        console.log(book3_pronounced_title);
-        console.log(book3_pronounced_author);
-        console.log(book3_pronounced_price);
-        console.log(book3_pronounced_kind);
-
-        console.log(book5_pronounced_title);
-        console.log(book5_pronounced_author);
-        console.log(book5_pronounced_price);
-        console.log(book5_pronounced_kind);
-        break;    
 
 }            
