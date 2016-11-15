@@ -86,7 +86,23 @@ console.log(wrap('J.M. Niks', {indent: '						'}));
 console.log('\n\n\n\n');
 
 
-//console.error or default should have given: ('There is no love for you!');
+/*
+
+Dear David,
+
+As you noticed: I/we tried several codes, but it didn't give the wanted result - a constantly chancing love letter that allowed you to decide the 
+number of sentences and the width of it. 
+What my script does instead is: it gives a constantly chancing love letter, but always with 5 sentences and the width depends on if the finalsentence() 
+uses the function or(). Because when it does you will get a subsentence. 
+
+I hope that I can fix it tomorrow in class anyway.
+
+Kind regards
+
+*/
+
+// PS. console.error or default should have given: ('There is no love for you!');
+
 
 
 
