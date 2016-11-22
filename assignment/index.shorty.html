@@ -1,0 +1,97 @@
+<html>
+	<head>	
+		<title>Talk to Shorty</title>	
+		<style>
+			/* CSS Styling */
+			#frame {
+				width: 30em;
+			}
+			textarea {
+				width: 100%;
+				border: 1px solid #888;
+				padding: 3px;
+			}
+			#inputs, #text_field  {
+				width: 100%;
+			}
+
+		/* We added some more CSS Styling to the labels and the body and integrated this in the code instead of creating a CSS file. */	
+
+		</style>
+
+	</head>
+
+	<body style="background-image: url(http://vignette4.wikia.nocookie.net/scarymovie/images/3/35/Shorty.jpg/revision/latest?cb=20101116023919);">
+
+		<!-- HTML -->
+		<label style="color:coral"><h1>Shorty: "Talk to me, man!!!"</h1></label>
+
+		<div id="frame">
+
+			<!-- text area where the conversation is displayed -->
+			<textarea id="conversation" text="Say something to Shorty!" rows="30" cols="65"></textarea>
+
+			<!-- inputs from human to send to server -->                   <!-- enables sending with the enter-key -->
+			<div id="inputs">
+
+				<label style="color:coral"><h3>Start a conversation with 'Shorty' by greeting him in the correct way:</h3></label>                                       
+				<input id="text_field" type="text" onkeydown="enter_message()" onkeypress="enter();" />
+				<input type="button" value="Send" onclick="send_message();" />
+
+			</div>
+
+		</div>		
+
+		<!-- SCRIPTS -->
+		<!-- import socket.io -->
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+
+		// connect to localhost on its port (see server.js -- 8088)
+		  var socket = io().connect('http://localhost:8088');
+
+		// when connecting 
+		  socket.on('connect', function (data) {
+		  	console.log('user connected');
+		  });
+
+
+   		// enables sending with the enter-key
+   		function enter() {
+
+        	if (event.keyCode == 13) { send_message(); return false; }
+    	
+    	};
+
+
+		// when receiving user message ('message from user')
+		  function send_message() {
+
+		  	var text = document.getElementById("text_field").value;
+
+		  	document.getElementById("conversation").value += 'You said: ' + text + '\n';
+
+		  	socket.emit('message from user', text);
+
+		  	document.getElementById("text_field").value = '';
+
+		  };
+
+
+		// when receiving a custom message form the server ('message from robot')
+		  socket.on('message from shorty', function(msg) {
+
+		  	document.getElementById("conversation").value += 'Shorty says: ' + msg + '\n';
+
+		  	console.log('Shorty: ' + msg);
+
+	  	var div = document.getElementById("conversation"); 				//makes the textfield scroll to the bottom during overflow
+   				div.scrollTop = div.scrollHeight - div.clientHeight;
+
+		  });
+
+
+		</script>		
+	</body>
+</html>
+

@@ -1,10 +1,2 @@
-
-  Usage: love.letter [options]
-
-  Options:
-
-    -h, --help                          output usage information
-    -V, --version                       output the version number
-    -w, —-width [letter width]          
-    -s, —-sentences [number sentences]  
-
+listening on port: 8088
+user connected
